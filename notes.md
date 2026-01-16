@@ -30,17 +30,34 @@ Em `playwright.config.ts` você pode:
 ```bash
 npm run test
 ```
-
+---
 - Executar um arquivo específico:
 ```bash
 npm run test <nome-do-arquivo>
 # ex: npm run test produtos
 ```
+---
+- Executar apenas um teste:
 
+Altere o nome do teste colocando `.only`, exemplo:
+```bash
+test.only("nome-do-teste")...
+```
+E execute o mesmo comando que roda todos os testes.
+
+---
 - Executar testes no Modo UI:
 ```bash
 npx playwright test --ui
 ```
+---
+- Executar testes com debug*:
+```bash
+npm playwright test --debug
+```
+_*além das ferramentas de debug da própria IDE, o playwright possibilita o debug com acesso à page testada, através do Playwright Inspector***, permitindo verificar o teste step by step_
+
+_**com o Playwright Inspector também é possível verificar locators da page a ser testada_
 
 ## Relatório e verificação
 - Ao rodar os testes, é gerado um `index.html` em `playwright-report` que pode ser aberto no navegador para visualizar resultados.
