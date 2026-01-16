@@ -1,16 +1,35 @@
-## Curso em andamento: 
-* [Curso básico de Playwright - Canal: Marcos Franco - Start QA](https://www.youtube.com/playlist?list=PLu6sLyecW1TjbX7mSfnoORw9G3RJPCrVs)
+## Testes com Playwright no Saucedemo
 
-## Rodando os testes:
-Todos os testes:
-Após configurado o `test` do `script` do package.json como: `npx playwright test`, dá pra rodar apenas com: `npm run test`.
+Testes de validação de login e página de produtos do [Saucedemo](https://www.saucedemo.com/) executados durante o  [Curso básico de Playwright](https://www.youtube.com/playlist?list=PLu6sLyecW1TjbX7mSfnoORw9G3RJPCrVs) do Canal — Marcos Franco (Start QA).
 
-Apenas um arquivo:
-`npm run test <nome-do-arquivo>`, exemplo: `npm run test produtos`
+## Instalação e comandos
+- Clonar o projeto:
+``` bash
+git clone https://github.com/vpaesi/playright_saucedemo.git
+cd playright_saucedemo
+npm install
+```
 
-## Verificando testes na interface
-Ao rodar um teste, é criado um `index.html` na pasta `playright-report` que quando aberta no navegador, apresenta o que foi rodado
+- Executar todos os testes:
+```bash
+npm run test
+```
 
-## Ordem de arquivos criados:
-* ``login.spec.ts``
-* ``produtos.spec.ts``
+- Executar um arquivo específico:
+```bash
+npm run test <nome-do-arquivo>
+# ex: npm run test produtos
+```
+
+- Executar testes no Modo UI:
+```bash
+npx playwright test --ui
+```
+
+## Relatório e verificação
+- Ao rodar os testes, é gerado um `index.html` em `playwright-report` que pode ser aberto no navegador para visualizar resultados.
+
+![Print do report dos testes de Login e Produtos](public/report-login-produtos.png)
+
+## Anotações
+- Minhas anotações pessoais realizadas durante o curso foram inseridas no arquivo `notes.md`
