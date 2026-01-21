@@ -5,8 +5,8 @@ Testes de validação de login e página de produtos do [Saucedemo](https://www.
 ## Instalação e comandos
 - Clonar o projeto:
 ``` bash
-git clone https://github.com/vpaesi/playright_saucedemo.git
-cd playright_saucedemo
+git clone https://github.com/vpaesi/playwright_saucedemo.git
+cd playwright_saucedemo
 npm install
 ```
 
